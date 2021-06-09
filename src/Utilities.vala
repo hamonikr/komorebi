@@ -164,7 +164,7 @@ namespace Komorebi.Utilities {
 	public void readConfigurationFile () {
 
 		// Default values
-		wallpaperName = "foggy_sunny_mountain";
+		wallpaperName = "aurora_video";
 		timeTwentyFour = true;
 		showDesktopIcons = true;
 		enableVideoWallpapers = true;
