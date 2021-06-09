@@ -51,9 +51,9 @@ namespace Komorebi.OnScreen {
             iconsList = new Gee.ArrayList<Icon>();
 
             margin_top = 60;
-            margin_left = 120;
+            margin_left = 60;
             y_expand = true;
-            iconSize = 64;
+            iconSize = 48;
 
             monitorChanges();
             getDesktops();

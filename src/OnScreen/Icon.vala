@@ -104,21 +104,21 @@ namespace Komorebi.OnScreen {
                                 iconSize, iconSize,
                                 pixbuf.get_rowstride());
 
-            titleText.set_markup(@"<span color='white' font='Lato Bold 11'>$titleName</span>");
+            titleText.set_markup(@"<span color='white' font='NanumSquareRound Regular 10'>$titleName</span>");            
 
         }
 
         public Icon.Trash (DesktopIcons parent) {
             this.parent = parent;
             this.titleName = "Trash";
-            var pixbuf = Utilities.getIconFrom("user-trash", 64);
+            var pixbuf = Utilities.getIconFrom("user-trash", 48);
 
             iconImage.set_data (pixbuf.get_pixels(),
                                 pixbuf.has_alpha ? Cogl.PixelFormat.RGBA_8888 : Cogl.PixelFormat.RGB_888,
                                 iconSize, iconSize,
                                 pixbuf.get_rowstride());
 
-            titleText.set_markup(@"<span color='white' font='Lato Bold 11'>Trash</span>");
+            titleText.set_markup(@"<span color='white' font='NanumSquareRound Regular 10'>Trash</span>");
 
             this.iconType = IconType.TRASH;
 
@@ -127,7 +127,7 @@ namespace Komorebi.OnScreen {
         public Icon.NewFolder (DesktopIcons parent) {
             this.parent = parent;
 
-            var pixbuf = Utilities.getIconFrom("folder", 64);
+            var pixbuf = Utilities.getIconFrom("folder", 48);
 
             iconImage.set_data (pixbuf.get_pixels(),
                                 pixbuf.has_alpha ? Cogl.PixelFormat.RGBA_8888 : Cogl.PixelFormat.RGB_888,

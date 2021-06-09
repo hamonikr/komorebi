@@ -1,0 +1,20 @@
+Source: komorebi
+Section: utils
+Priority: optional
+Maintainer: HamoniKR <pkg@hamonikr.org>
+Build-Depends: debhelper (>= 9)
+Standards-Version: 3.9.5
+
+Package: komorebi
+Architecture: all
+Depends: cmake,
+         valac,
+         libgtk-3-dev,
+         libgee-0.8-dev,
+         libclutter-gtk-1.0-dev,
+         libclutter-1.0-dev,
+         libwebkit2gtk-4.0-dev,
+         libclutter-gst-3.0-dev
+Suggests: gstreamer1.0-libav
+Description: animated wallpaper manager for Linux
+ 애니메이션 배경화면 설정 프로그램.

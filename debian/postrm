@@ -1,0 +1,13 @@
+#!/bin/bash
+echo "[INFO] Ignore any errors"
+echo "[*] Resetting desktop configuration"
+
+killall komorebi || true
+
+RUID=$(who | awk 'FNR == 1 {print $1}')
+RUSER_UID=$(id -u ${RUID})
+sudo -u ${RUID} DBUS_SESSION_BUS_ADDRESS="unix:path=/run/user/${RUSER_UID}/bus" \
+ gsettings set org.gnome.desktop.background show-desktop-icons true || true
+
+sudo -u ${RUID} DBUS_SESSION_BUS_ADDRESS="unix:path=/run/user/${RUSER_UID}/bus" \
+ gsettings set org.nemo.desktop show-desktop-icons true || true

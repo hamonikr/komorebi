@@ -1,52 +1,49 @@
-<p align="center"><img src="https://raw.githubusercontent.com/cheesecakeufo/komorebi/master/screenshots/komorebi-icon.png" width="130"></p>
-<h2 align="center">Komorebi - Animated Wallpapers for Linux</h2>
-<p align="center">(n) sunlight filtering through trees.</p>
+
+# Komorebi
+ 
+ 리눅스 데스크톱에서 애니메이션 배경화면을 사용할 수 있게 해주는 프로그램입니다.
+
+ Animated Wallpapers for Linux
+
+ * upstream : https://github.com/cheesecakeufo/komorebi.git
+
+![app](https://raw.githubusercontent.com/cheesecakeufo/komorebi/master/screenshots/collage.jpg)
 
 
+# Usage
+프로그램 설치 후 `프로그램 메뉴 > komorebi` 를 실행
 
-<p align="center">
-	<a href="http://www.kernel.org"><img alt="Platform (GNU/Linux)" src="https://img.shields.io/badge/platform-GNU/Linux-blue.svg"></a>
-	<a href="https://github.com/sindresorhus/awesome"><img alt="Awesome" src="https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg"></a>
-	<a href="https://travis-ci.org/cheesecakeufo/komorebi"><img alt="Build Status" src="https://travis-ci.org/phw/peek.svg?branch=master"></a>
-</p>
+# Install
 
-<p align="center">
-<a href="http://www.youtube.com/watch?feature=player_embedded&v=NvfRy5qMsos
-" target="_blank"><img src="http://img.youtube.com/vi/NvfRy5qMsos/0.jpg" 
-alt="Komorebi Demo" width="240" height="180" border="10" /><br>Watch demo</a>
-</p>
+## HamoniKR
+```
+sudo apt update
+sudo apt install komorebi
+```
 
-## What is Komorebi?
+## Other Ubuntu based distro
+```
+# add hamonikr apt repo
+wget -qO- https://pkg.hamonikr.org/add-hamonikr.apt | sudo -E bash -
 
-Komorebi is an awesome animated wallpapers manager for all Linux platforms.
-It provides fully customizeable image, video, and web page wallpapers that can be tweaked at any time!
+# install
+sudo apt install komorebi
+```
 
-![s1](https://raw.githubusercontent.com/cheesecakeufo/komorebi/master/screenshots/collage.jpg)
-
-
-## How do I install Komorebi?
-
-Two ways:
-
-### Packaged install (easy)
-
-1. Download `Komorebi` from the [Komorebi releases page](https://github.com/cheesecakeufo/komorebi/releases).
-2. Install Komorebi using your favorite package installer (aka. double click on it)
-3. Launch Komorebi!
-
-### Manual Installing (advanced)
-
-Run the following:
+## Install from source
 ```
 sudo add-apt-repository ppa:gnome3-team/gnome3 -y
 sudo add-apt-repository ppa:vala-team -y
 sudo add-apt-repository ppa:gnome3-team/gnome3-staging -y
+
 sudo apt install cmake valac libgtk-3-dev libgee-0.8-dev libclutter-gtk-1.0-dev libclutter-1.0-dev libwebkit2gtk-4.0-dev libclutter-gst-3.0-dev
-git clone https://github.com/cheesecakeufo/komorebi.git
+
+git clone https://github.com/hamonikr/komorebi.git
 cd komorebi
 mkdir build && cd build
 cmake .. && sudo make install && ./komorebi
 ```
+
 
 ## Change Wallpaper & Desktop Preferences
 To change desktop preferences or your wallpaper, right click anywhere on the desktop to show the menu.
@@ -95,13 +92,3 @@ If your issue has not already been reported, please report it *[`here`](https://
 Komorebi was originally intended to run on an unreleased OS project. Since many people already use Komorebi, an update could potentially break Komorebi and custom-made wallpapers.
 
 It is possible to change the file structure with code changes and a `postinst` script but I'd rather keep it as is for now or if you have the time to make one, feel free to do so and submit a PR!
-
-
-## Status of Development
-
-Komorebi still receives updates but they are not as frequent due to my involvement in other open-source projects.
-
-
-### Thanks To:
-
-Pete Lewis ([@PJayB](https://github.com/PJayB)) for adding mult-monitor support
